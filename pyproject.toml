@@ -1,0 +1,47 @@
+[project]
+name = "qiskit-book"
+version = "0.1.0"
+description = "Qiskit learning material formatted with MyST"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    # Core Qiskit packages
+    "qiskit>=2.2",
+    "qiskit-aer>=0.17",
+    "qiskit-ibm-runtime>=0.46",
+
+    # Scientific computing, data analysis, and machine learning
+    "numpy>=2.2",
+    "scipy>=1.16",
+    "pandas>=2.0",
+    "matplotlib>=3.10",
+    "sympy>=1.12",
+    "scikit-learn>=1.7",
+    "rustworkx>=0.17",
+    
+    # Book creation
+    "ipykernel>=7.0",
+    "pillow>=12.0",
+    "pillow-avif-plugin>=1.5",
+    "pylatexenc>=2.0",
+    "mystmd>=1.8",
+]
+
+[project.optional-dependencies]
+chem = [
+    "qiskit-addon-sqd>=0.12.0",
+    "qiskit-addon-utils>=0.3.0",
+    "pyscf>=2.0.0",
+    "openfermion>=1.6.0",
+    "ffsim>=0.0.72",
+]
+
+crypto = [
+    "cryptography>=42.0.0",
+    "liboqs-python>=0.14",
+    "secretpy>=0.12.0",
+]
+
+hpc = [
+    "mpi4py>=4.0.0",
+]

@@ -8,3 +8,12 @@ wheels/
 
 # Virtual environments
 .venv
+
+# MyST build outputs
+_build
+
+# Content files
+myst/docs/
+myst/learning/
+myst/public/
+myst/test/

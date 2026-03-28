@@ -1,0 +1,22 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: c988cc5a-db7d-4f28-9986-b87ed3788c78
+  title: Quantum Computing with Qiskit
+  description: A collection of material for learning QC with Qiskit
+  keywords:
+    - quantum computing
+    - qiskit
+  # authors: []
+  # github: https://github.com/Qiskit/documentation
+  numbering: false
+
+site:
+  template: book-theme
+  options:
+    folders: true
+    favicon: assets/qiskit_icon_32.ico
+    logo: assets/qiskit_logo.webp
+
+extends:
+  - myst_toc.yml

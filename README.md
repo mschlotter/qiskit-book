@@ -1,6 +1,6 @@
 # Qiskit Book
 
-This is a proof-of-concept project to check out the capabilities of the MyST markup language.
+This is a proof-of-concept project to check out the capabilities of the MyST Markdown extension.
 As example source, the Qiskit learning material is used and processed to be compatible with Myst. 
 
 ## Prerequisites
@@ -37,13 +37,13 @@ For optional dependencies:
 
 ```bash
 # Chemistry packages
-pip install -e ".[chem]"
+uv sync --extra chem
 
 # Cryptography packages
-pip install -e ".[crypto]"
+uv sync --extra crypto
 
 # HPC packages
-pip install -e ".[hpc]"
+uv sync --extra hps
 ```
 
 ## Usage
@@ -97,4 +97,4 @@ Regarding licensing of the Qiskit submodule, see the LICENSE files in the `docum
 
 - [Qiskit Documentation](https://quantum.cloud.ibm.com/docs/)
 - [Qiskit Learning](https://quantum.cloud.ibm.com/learning/)
-- [MyST Markdown](https://myst-parser.readthedocs.io/)
+- [MyST Markdown](https://mystmd.org/)

@@ -2,3 +2,4 @@
 	path = documentation
 	url = https://github.com/Qiskit/documentation.git
 	branch = main
+	shallow = true

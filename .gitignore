@@ -12,6 +12,9 @@ wheels/
 # MyST build outputs
 _build
 
+# Archive files
+archive/
+
 # Content files
 myst/docs/
 myst/learning/

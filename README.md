@@ -43,7 +43,7 @@ uv sync --extra chem
 uv sync --extra crypto
 
 # HPC packages
-uv sync --extra hps
+uv sync --extra hpc
 ```
 
 ## Usage

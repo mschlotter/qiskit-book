@@ -74,8 +74,9 @@ def process_notebook(ipynb_path: Path):
             new_source_lines = []
 
             for line in source_lines:
-                if not pc.identify_cspell_directive(line):
+                if not (pc.is_cspell_directive(line) or pc.is_accordion_tag(line)):
                     new_line = pc.replace_figure_with_note(line)
+                    new_line = pc.replace_accordion_with_note(line)
                     new_line, links_to_download = replace_links(
                         new_line, ipynb_path, links_to_download
                     )

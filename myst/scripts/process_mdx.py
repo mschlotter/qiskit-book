@@ -35,11 +35,25 @@ def remove_cspell(content: str) -> str:
     """
     lines = content.splitlines()
     original_line_count = len(lines)
-    lines = [line for line in lines if not pc.identify_cspell_directive(line)]
+    lines = [line for line in lines if not pc.is_cspell_directive(line)]
     removed_count = original_line_count - len(lines)
     if removed_count:
         print(f"  [INFO] Removed {removed_count} cspell directive(s).")
     return "\n".join(lines)
+
+
+def replace_accordion(content: str) -> str:
+    """
+    Removes Accordion tags and converts AccordionItem blocks to tip blocks.
+    Returns the content with those changes applied.
+    """
+    lines = content.splitlines()
+    new_lines = [
+        pc.replace_accordion_with_note(line)
+        for line in lines
+        if not pc.is_accordion_tag(line)
+    ]
+    return "\n".join(new_lines)
 
 
 def process_markup(mdx_path: Path):
@@ -57,6 +71,9 @@ def process_markup(mdx_path: Path):
 
     # Remove cspell directive lines
     new_content = remove_cspell(new_content)
+
+    # Replace AccordionItem blocks with tip blocks
+    new_content = replace_accordion(new_content)
 
     # Remove the "## Exam" section and everything that follows
     exam_match = re.search(r"(?m)^\s*##\s*Exam\b", new_content)

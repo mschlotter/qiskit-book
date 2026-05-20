@@ -10,7 +10,7 @@ BASE_URL = "https://quantum.cloud.ibm.com"
 
 # Directories to search for files
 SEARCH_DIRS = ["./myst/docs", "./myst/learning"]
-#SEARCH_DIRS = ["./myst/test"]
+# SEARCH_DIRS = ["./myst/test"]
 
 # Image storage location prefix
 IMAGE_STORAGE_PREFIX = "myst/public"
@@ -69,11 +69,21 @@ def detect_json_indent(content_str: str) -> int:
     return 2  # default to 2 spaces
 
 
-def identify_cspell_directive(line: str) -> bool:
+def is_cspell_directive(line: str) -> bool:
     """
     Identifies if the given line is a cspell directive comment.
     """
     return bool(re.match(r"^.*{\s*/\*\s*cspell:ignore.+\*/\s*\}.*", line))
+
+
+def is_accordion_tag(line: str) -> bool:
+    """
+    Identifies if the given line is an <Accordion> or </Accordion> tag.
+    """
+    return bool(
+        re.match(r"^\s*<Accordion(?:\s.*)?>\s*$", line)
+        or re.match(r"^\s*</Accordion>\s*$", line)
+    )
 
 
 def replace_figure_with_note(line: str) -> str:
@@ -94,6 +104,30 @@ def replace_figure_with_note(line: str) -> str:
     elif re.search(end_pattern, line):
         new_line = re.sub(end_pattern, ":::", line)
         print("  Converted last line of Figure block to note block.")
+        return new_line
+
+    else:
+        return line
+
+
+def replace_accordion_with_note(line: str) -> str:
+    """
+    Converts <AccordionItem title="HEADING"> blocks to :::{note} HEADING blocks.
+    Handles multiline content between opening and closing tags.
+    """
+    start_pattern = r'<AccordionItem\s+title="([^"]+)">'
+    end_pattern = r"</AccordionItem>"
+
+    # Check if the pattern is present in the input string
+    if re.search(start_pattern, line):
+        replacement = r":::{note} \1\n:class: dropdown"
+        new_line = re.sub(start_pattern, replacement, line)
+        print("  Converted first line of AccordionItem block to note block.")
+        return new_line
+
+    elif re.search(end_pattern, line):
+        new_line = re.sub(end_pattern, ":::", line)
+        print("  Converted last line of AccordionItem block to note block.")
         return new_line
 
     else:

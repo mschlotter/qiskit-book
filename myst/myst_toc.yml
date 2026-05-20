@@ -129,6 +129,16 @@ project:
       - file: learning/courses/use-a-qc-today/quantum-computing-context.ipynb
       - file: learning/courses/use-a-qc-today/continue-your-learning-journey.ipynb
 
+    - title: Quantum business foundations
+      children:
+      - file: learning/courses/quantum-business-foundations/index.md
+      - file: learning/courses/quantum-business-foundations/start-your-quantum-journey.md
+      - file: learning/courses/quantum-business-foundations/introduction-to-quantum-computing.md
+      - file: learning/courses/quantum-business-foundations/quantum-computing-fundamentals.md
+      - file: learning/courses/quantum-business-foundations/quantum-technology.md
+      - file: learning/courses/quantum-business-foundations/business-impacts.md
+      - file: learning/courses/quantum-business-foundations/how-to-become-quantum-ready.md
+
     - title: Quantum computing in practice
       children:
       - file: learning/courses/quantum-computing-in-practice/index.md
@@ -139,14 +149,22 @@ project:
       - file: learning/courses/quantum-computing-in-practice/mapping.ipynb
       - file: learning/courses/quantum-computing-in-practice/simulating-nature.ipynb
 
-    - title: Quantum machine learning
+    - title: Designing and leading quantum projects
       children:
-      - file: learning/courses/quantum-machine-learning/index.md
-      - file: learning/courses/quantum-machine-learning/introduction.ipynb
-      - file: learning/courses/quantum-machine-learning/classical-ml-review.ipynb
-      - file: learning/courses/quantum-machine-learning/data-encoding.ipynb
-      - file: learning/courses/quantum-machine-learning/quantum-kernel-methods.ipynb
-      - file: learning/courses/quantum-machine-learning/qvc-qnn.ipynb
+      - file: learning/courses/designing-and-leading-quantum-projects/index.md
+      - file: learning/courses/designing-and-leading-quantum-projects/introduction.md
+      - file: learning/courses/designing-and-leading-quantum-projects/early-stages.md
+      - file: learning/courses/designing-and-leading-quantum-projects/standing-up-team.md
+      - file: learning/courses/designing-and-leading-quantum-projects/grant-writing.md
+
+    - title: Integrating quantum and high-performance computing
+      children:
+      - file: learning/courses/integrating-quantum-and-high-performance-computing/index.md
+      - file: learning/courses/integrating-quantum-and-high-performance-computing/introduction.ipynb
+      - file: learning/courses/integrating-quantum-and-high-performance-computing/compute-resources.ipynb
+      - file: learning/courses/integrating-quantum-and-high-performance-computing/programming-models.ipynb
+      - file: learning/courses/integrating-quantum-and-high-performance-computing/sqd-skqd.ipynb
+      - file: learning/courses/integrating-quantum-and-high-performance-computing/next-steps.ipynb
 
     - title: Variational algorithm design
       children:
@@ -158,6 +176,35 @@ project:
       - file: learning/courses/variational-algorithm-design/optimization-loops.ipynb     
       - file: learning/courses/variational-algorithm-design/instances-and-extensions.ipynb
       - file: learning/courses/variational-algorithm-design/examples-and-applications.ipynb 
+
+    - title: Quantum diagonalization algorithms
+      children:
+      - file: learning/courses/quantum-diagonalization-algorithms/index.md
+      - file: learning/courses/quantum-diagonalization-algorithms/introduction.ipynb
+      - file: learning/courses/quantum-diagonalization-algorithms/vqe.ipynb
+      - file: learning/courses/quantum-diagonalization-algorithms/krylov.ipynb
+      - file: learning/courses/quantum-diagonalization-algorithms/sqd-overview.ipynb
+      - file: learning/courses/quantum-diagonalization-algorithms/sqd-implementation.ipynb
+      - file: learning/courses/quantum-diagonalization-algorithms/skqd.ipynb     
+
+    - title: Quantum chemistry with VQE
+      children:
+      - file: learning/courses/quantum-chem-with-vqe/index.md
+      - file: learning/courses/quantum-chem-with-vqe/introduction.ipynb
+      - file: learning/courses/quantum-chem-with-vqe/hamiltonian-construction.ipynb
+      - file: learning/courses/quantum-chem-with-vqe/ansatz.ipynb
+      - file: learning/courses/quantum-chem-with-vqe/classical-optimizers.ipynb
+      - file: learning/courses/quantum-chem-with-vqe/ground-state.ipynb     
+      - file: learning/courses/quantum-chem-with-vqe/geometry.ipynb
+
+    - title: Quantum machine learning
+      children:
+      - file: learning/courses/quantum-machine-learning/index.md
+      - file: learning/courses/quantum-machine-learning/introduction.ipynb
+      - file: learning/courses/quantum-machine-learning/classical-ml-review.ipynb
+      - file: learning/courses/quantum-machine-learning/data-encoding.ipynb
+      - file: learning/courses/quantum-machine-learning/quantum-kernel-methods.ipynb
+      - file: learning/courses/quantum-machine-learning/qvc-qnn.ipynb
 
     - title: Quantum safe cryptography
       children:

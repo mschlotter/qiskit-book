@@ -82,10 +82,10 @@ def main():
         print(f"\n=== Scanning in {base_path} ===")
 
         # Use .rglob to recursively find all .mdx files
-        mdx_files = list(base_path.rglob("index.mdx"))
+        mdx_files = list(base_path.rglob("*.mdx"))
 
         if not mdx_files:
-            print(f"  No index.mdx files found in {base_path}.")
+            print(f"  No .mdx files found in {base_path}.")
             continue
 
         for mdx_path in mdx_files:

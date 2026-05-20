@@ -28,6 +28,20 @@ def replace_links(content: str, mdx_path: Path) -> Tuple[str, Set[str]]:
     return new_content, links_to_download
 
 
+def remove_cspell(content: str) -> str:
+    """
+    Remove all cspell directive lines from the content.
+    Returns the content with those lines removed.
+    """
+    lines = content.splitlines()
+    original_line_count = len(lines)
+    lines = [line for line in lines if not pc.identify_cspell_directive(line)]
+    removed_count = original_line_count - len(lines)
+    if removed_count:
+        print(f"  [INFO] Removed {removed_count} cspell directive(s).")
+    return "\n".join(lines)
+
+
 def process_markup(mdx_path: Path):
     print(f"\n--- Processing MDX: {mdx_path} ---")
 
@@ -40,6 +54,9 @@ def process_markup(mdx_path: Path):
 
     # Replace links and collect those to download
     new_content, links_to_download = replace_links(content, mdx_path)
+
+    # Remove cspell directive lines
+    new_content = remove_cspell(new_content)
 
     # Remove the "## Exam" section and everything that follows
     exam_match = re.search(r"(?m)^\s*##\s*Exam\b", new_content)

@@ -120,6 +120,15 @@ project:
         - file: learning/courses/foundations-of-quantum-error-correction/fault-tolerant-quantum-computing/controlling-error-propagation.ipynb
         - file: learning/courses/foundations-of-quantum-error-correction/fault-tolerant-quantum-computing/threshold-theorem.ipynb
     
+    - title: Use a quantum computer today
+      children:
+      - file: learning/courses/use-a-qc-today/index.md
+      - file: learning/courses/use-a-qc-today/build-and-run-your-first-quantum-program.ipynb
+      - file: learning/courses/use-a-qc-today/quantum-mechanics-basics.ipynb
+      - file: learning/courses/use-a-qc-today/your-first-quantum-experiment.ipynb
+      - file: learning/courses/use-a-qc-today/quantum-computing-context.ipynb
+      - file: learning/courses/use-a-qc-today/continue-your-learning-journey.ipynb
+
     - title: Quantum computing in practice
       children:
       - file: learning/courses/quantum-computing-in-practice/index.md
@@ -150,3 +159,15 @@ project:
       - file: learning/courses/variational-algorithm-design/instances-and-extensions.ipynb
       - file: learning/courses/variational-algorithm-design/examples-and-applications.ipynb 
 
+    - title: Quantum safe cryptography
+      children:
+      - file: learning/courses/quantum-safe-cryptography/index.md
+      - file: learning/courses/quantum-safe-cryptography/introduction-to-this-course.md
+      - file: learning/courses/quantum-safe-cryptography/cryptographic-hash-functions.ipynb
+      - file: learning/courses/quantum-safe-cryptography/symmetric-key-cryptography.ipynb
+      - file: learning/courses/quantum-safe-cryptography/asymmetric-key-cryptography.ipynb
+      - file: learning/courses/quantum-safe-cryptography/quantum-safe-cryptography.ipynb     
+      - file: learning/courses/quantum-safe-cryptography/whats-next.md
+      - file: learning/courses/quantum-safe-cryptography/works-cited.md
+
+    
